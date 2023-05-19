@@ -10,12 +10,34 @@ import RxSwift
 import SnapKit
 import RxCocoa
 
-class HomeViewController: UITabBarController {
+class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
+    
+    override func configView() {
+        
+    }
+    override func configLauout() {
+        
+    }
+    override func bindRX() {
+        
+    }
+    
+    
+    
+    //MARK: UI
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        return view
+    }()
+    
+    
+
 
 }

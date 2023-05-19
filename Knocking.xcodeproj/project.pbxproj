@@ -22,6 +22,9 @@
 		B5EFC8372A177A6C00B4AA8D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B5EFC8362A177A6C00B4AA8D /* RxSwift */; };
 		B5EFC83A2A177AA100B4AA8D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5EFC8392A177AA100B4AA8D /* SnapKit */; };
 		B5EFC83D2A177AC300B4AA8D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC83C2A177AC300B4AA8D /* HomeViewController.swift */; };
+		B5EFC83F2A17C2B800B4AA8D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC83E2A17C2B800B4AA8D /* HomeViewModel.swift */; };
+		B5EFC8412A17C2F500B4AA8D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC8402A17C2F500B4AA8D /* BaseViewController.swift */; };
+		B5EFC8442A17CA4800B4AA8D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC8432A17CA4800B4AA8D /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		B5EFC81E2A1778E800B4AA8D /* KnockingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnockingUITests.swift; sourceTree = "<group>"; };
 		B5EFC8202A1778E800B4AA8D /* KnockingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnockingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B5EFC83C2A177AC300B4AA8D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B5EFC83E2A17C2B800B4AA8D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B5EFC8402A17C2F500B4AA8D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B5EFC8432A17CA4800B4AA8D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +148,9 @@
 		B5EFC82D2A17794800B4AA8D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B5EFC8422A17CA3B00B4AA8D /* Calendar */,
 				B5EFC83B2A177AB600B4AA8D /* Home */,
+				B5EFC8402A17C2F500B4AA8D /* BaseViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -160,8 +168,17 @@
 			isa = PBXGroup;
 			children = (
 				B5EFC83C2A177AC300B4AA8D /* HomeViewController.swift */,
+				B5EFC83E2A17C2B800B4AA8D /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B5EFC8422A17CA3B00B4AA8D /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				B5EFC8432A17CA4800B4AA8D /* CalendarViewController.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +326,10 @@
 				B5EFC83D2A177AC300B4AA8D /* HomeViewController.swift in Sources */,
 				B5EFC8052A1778E700B4AA8D /* Knocking.xcdatamodeld in Sources */,
 				B5EFC7FB2A1778E700B4AA8D /* AppDelegate.swift in Sources */,
+				B5EFC83F2A17C2B800B4AA8D /* HomeViewModel.swift in Sources */,
 				B5EFC7FD2A1778E700B4AA8D /* SceneDelegate.swift in Sources */,
+				B5EFC8442A17CA4800B4AA8D /* CalendarViewController.swift in Sources */,
+				B5EFC8412A17C2F500B4AA8D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
