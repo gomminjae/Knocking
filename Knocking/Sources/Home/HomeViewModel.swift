@@ -9,7 +9,12 @@ import Foundation
 import RxSwift
 
 
-
+protocol HomeViewModelBindable {
+    associatedtype Input
+    associatedtype Output
+    
+    var disposeBag: DisposeBag { get set }
+}
 
 class HomeViewModel {
     private let disposeBag = DisposeBag()
