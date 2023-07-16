@@ -18,4 +18,6 @@ protocol HomeViewModelBindable {
 
 class HomeViewModel {
     private let disposeBag = DisposeBag()
+    
+    
 }

@@ -13,6 +13,8 @@ class HomeCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configureCell()
+        configureLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -21,7 +23,15 @@ class HomeCell: UICollectionViewCell {
     
     
     func configureCell() {
+        addSubview(titleLabel)
         
+    }
+    
+    func configureLayout() {
+        titleLabel.snp.makeConstraints {
+            $0.centerX.equalTo(self)
+            $0.centerY.equalTo(self)
+        }
     }
     
     
@@ -33,4 +43,5 @@ class HomeCell: UICollectionViewCell {
     let subTitleLabel = UILabel().then {
         $0.text = "Subtitle"
     }
+    
 }

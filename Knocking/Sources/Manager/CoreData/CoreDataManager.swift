@@ -11,10 +11,18 @@ import RxSwift
 
 
 protocol CoreDataManagerOuput {
-   
+    
     
 }
 
 class CoreDataManager {
     
+    
+    static let shared = CoreDataManager()
+    
+    
+//    lazy var persistentContainer: NSPersistentContainer = {
+//        let container = NSPersistentContainer(name: <#T##String#>)
+//        
+//    }
 }
