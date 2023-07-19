@@ -6,7 +6,6 @@
 
 import UIKit
 import SnapKit
-import Then
 
 
 class HomeCell: UICollectionViewCell {
@@ -23,25 +22,15 @@ class HomeCell: UICollectionViewCell {
     
     
     func configureCell() {
-        addSubview(titleLabel)
+       // addSubview(titleLabel)
         
     }
     
     func configureLayout() {
-        titleLabel.snp.makeConstraints {
-            $0.centerX.equalTo(self)
-            $0.centerY.equalTo(self)
-        }
+
     }
     
     
-    
-    let titleLabel = UILabel().then {
-        $0.text = "Title"
-    }
-    
-    let subTitleLabel = UILabel().then {
-        $0.text = "Subtitle"
-    }
+
     
 }

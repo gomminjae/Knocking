@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B545F1022A5696B00002DA8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B545F1012A5696B00002DA8F /* Main.storyboard */; };
-		B545F1052A56971A0002DA8F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B545F1042A56971A0002DA8F /* Then */; };
 		B545F1082A57E0D20002DA8F /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F1072A57E0D20002DA8F /* HomeCell.swift */; };
 		B545F10C2A5BDB8A0002DA8F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F10B2A5BDB8A0002DA8F /* CoreDataManager.swift */; };
 		B545F10F2A5BF3F90002DA8F /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B545F10E2A5BF3F90002DA8F /* FSCalendar */; };
 		B545F1122A5BF4880002DA8F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F1112A5BF4880002DA8F /* User.swift */; };
 		B545F1142A5BF4DA0002DA8F /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F1132A5BF4DA0002DA8F /* Goal.swift */; };
 		B545F1172A5E7B2F0002DA8F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F1162A5E7B2F0002DA8F /* CalendarView.swift */; };
+		B545F11C2A65090B0002DA8F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F11B2A65090B0002DA8F /* UILabel+Extension.swift */; };
 		B54635502A19A25200F0F140 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B546354F2A19A25200F0F140 /* WidgetKit.framework */; };
 		B54635522A19A25200F0F140 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54635512A19A25200F0F140 /* SwiftUI.framework */; };
 		B54635552A19A25200F0F140 /* DreamCatcherBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54635542A19A25200F0F140 /* DreamCatcherBundle.swift */; };
@@ -86,6 +86,7 @@
 		B545F1112A5BF4880002DA8F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B545F1132A5BF4DA0002DA8F /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		B545F1162A5E7B2F0002DA8F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		B545F11B2A65090B0002DA8F /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		B546354D2A19A25200F0F140 /* DreamCatcherExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DreamCatcherExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B546354F2A19A25200F0F140 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B54635512A19A25200F0F140 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -127,7 +128,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5EFC8352A177A6C00B4AA8D /* RxRelay in Frameworks */,
-				B545F1052A56971A0002DA8F /* Then in Frameworks */,
 				B5EFC8332A177A6C00B4AA8D /* RxCocoa in Frameworks */,
 				B5EFC8372A177A6C00B4AA8D /* RxSwift in Frameworks */,
 				B5EFC8312A177A6C00B4AA8D /* RxBlocking in Frameworks */,
@@ -192,6 +192,14 @@
 				B545F1162A5E7B2F0002DA8F /* CalendarView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B545F11A2A6508FB0002DA8F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B545F11B2A65090B0002DA8F /* UILabel+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		B546354E2A19A25200F0F140 /* Frameworks */ = {
@@ -272,6 +280,7 @@
 		B5EFC82D2A17794800B4AA8D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B545F11A2A6508FB0002DA8F /* Extension */,
 				B545F1152A5E7B170002DA8F /* Components */,
 				B545F1102A5BF47E0002DA8F /* Model */,
 				B545F1092A5BDB6F0002DA8F /* Manager */,
@@ -350,7 +359,6 @@
 				B5EFC8342A177A6C00B4AA8D /* RxRelay */,
 				B5EFC8362A177A6C00B4AA8D /* RxSwift */,
 				B5EFC8392A177AA100B4AA8D /* SnapKit */,
-				B545F1042A56971A0002DA8F /* Then */,
 				B545F10E2A5BF3F90002DA8F /* FSCalendar */,
 			);
 			productName = Knocking;
@@ -431,7 +439,6 @@
 			packageReferences = (
 				B5EFC82F2A177A6C00B4AA8D /* XCRemoteSwiftPackageReference "RxSwift" */,
 				B5EFC8382A177AA100B4AA8D /* XCRemoteSwiftPackageReference "SnapKit" */,
-				B545F1032A56971A0002DA8F /* XCRemoteSwiftPackageReference "Then" */,
 				B545F10D2A5BF3F90002DA8F /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = B5EFC7F82A1778E700B4AA8D /* Products */;
@@ -507,6 +514,7 @@
 				B545F10C2A5BDB8A0002DA8F /* CoreDataManager.swift in Sources */,
 				B5EFC8442A17CA4800B4AA8D /* CalendarViewController.swift in Sources */,
 				B545F1122A5BF4880002DA8F /* User.swift in Sources */,
+				B545F11C2A65090B0002DA8F /* UILabel+Extension.swift in Sources */,
 				B5EFC8412A17C2F500B4AA8D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -917,14 +925,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B545F1032A56971A0002DA8F /* XCRemoteSwiftPackageReference "Then" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devxoul/Then";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
 		B545F10D2A5BF3F90002DA8F /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
@@ -952,11 +952,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B545F1042A56971A0002DA8F /* Then */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B545F1032A56971A0002DA8F /* XCRemoteSwiftPackageReference "Then" */;
-			productName = Then;
-		};
 		B545F10E2A5BF3F90002DA8F /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B545F10D2A5BF3F90002DA8F /* XCRemoteSwiftPackageReference "FSCalendar" */;

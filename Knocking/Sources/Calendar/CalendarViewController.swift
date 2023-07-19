@@ -10,7 +10,6 @@ import RxSwift
 import RxCocoa
 import SnapKit
 import FSCalendar
-import Then
 
 class CalendarViewController: UIViewController {
 
