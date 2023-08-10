@@ -9,8 +9,9 @@ import Foundation
 
 
 
-struct Goal {
+struct Goal: Hashable {
     
     var title: String
     var content: String
+    var date: Date?
 }

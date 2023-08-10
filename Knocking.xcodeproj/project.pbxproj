@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B545F1022A5696B00002DA8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B545F1012A5696B00002DA8F /* Main.storyboard */; };
-		B545F1082A57E0D20002DA8F /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F1072A57E0D20002DA8F /* HomeCell.swift */; };
 		B545F10C2A5BDB8A0002DA8F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F10B2A5BDB8A0002DA8F /* CoreDataManager.swift */; };
 		B545F10F2A5BF3F90002DA8F /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B545F10E2A5BF3F90002DA8F /* FSCalendar */; };
 		B545F1122A5BF4880002DA8F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F1112A5BF4880002DA8F /* User.swift */; };
 		B545F1142A5BF4DA0002DA8F /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F1132A5BF4DA0002DA8F /* Goal.swift */; };
 		B545F1172A5E7B2F0002DA8F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F1162A5E7B2F0002DA8F /* CalendarView.swift */; };
 		B545F11C2A65090B0002DA8F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F11B2A65090B0002DA8F /* UILabel+Extension.swift */; };
+		B545F11F2A683D060002DA8F /* PlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F11E2A683D060002DA8F /* PlanningViewController.swift */; };
+		B545F1212A701BBD0002DA8F /* PlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F1202A701BBD0002DA8F /* PlanViewModel.swift */; };
+		B545F12C2A762FE60002DA8F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545F12B2A762FE60002DA8F /* OnboardingViewController.swift */; };
 		B54635502A19A25200F0F140 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B546354F2A19A25200F0F140 /* WidgetKit.framework */; };
 		B54635522A19A25200F0F140 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54635512A19A25200F0F140 /* SwiftUI.framework */; };
 		B54635552A19A25200F0F140 /* DreamCatcherBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54635542A19A25200F0F140 /* DreamCatcherBundle.swift */; };
@@ -22,6 +24,10 @@
 		B54635592A19A25200F0F140 /* DreamCatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54635582A19A25200F0F140 /* DreamCatcher.swift */; };
 		B546355B2A19A25300F0F140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B546355A2A19A25300F0F140 /* Assets.xcassets */; };
 		B546355F2A19A25300F0F140 /* DreamCatcherExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B546354D2A19A25200F0F140 /* DreamCatcherExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B55764FC2A85196C00C75CCA /* ReusableIdentifirer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55764FB2A85196C00C75CCA /* ReusableIdentifirer.swift */; };
+		B55764FF2A8519BE00C75CCA /* GoalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55764FE2A8519BE00C75CCA /* GoalHeaderView.swift */; };
+		B55765012A8538AE00C75CCA /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55765002A8538AE00C75CCA /* GoalCell.swift */; };
+		B55765032A85391100C75CCA /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55765022A85391100C75CCA /* TodoCell.swift */; };
 		B5EFC7FB2A1778E700B4AA8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC7FA2A1778E700B4AA8D /* AppDelegate.swift */; };
 		B5EFC7FD2A1778E700B4AA8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC7FC2A1778E700B4AA8D /* SceneDelegate.swift */; };
 		B5EFC8052A1778E700B4AA8D /* Knocking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC8032A1778E700B4AA8D /* Knocking.xcdatamodeld */; };
@@ -81,12 +87,14 @@
 
 /* Begin PBXFileReference section */
 		B545F1012A5696B00002DA8F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		B545F1072A57E0D20002DA8F /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		B545F10B2A5BDB8A0002DA8F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B545F1112A5BF4880002DA8F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B545F1132A5BF4DA0002DA8F /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		B545F1162A5E7B2F0002DA8F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		B545F11B2A65090B0002DA8F /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		B545F11E2A683D060002DA8F /* PlanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
+		B545F1202A701BBD0002DA8F /* PlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewModel.swift; sourceTree = "<group>"; };
+		B545F12B2A762FE60002DA8F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		B546354D2A19A25200F0F140 /* DreamCatcherExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DreamCatcherExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B546354F2A19A25200F0F140 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B54635512A19A25200F0F140 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -95,6 +103,10 @@
 		B54635582A19A25200F0F140 /* DreamCatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamCatcher.swift; sourceTree = "<group>"; };
 		B546355A2A19A25300F0F140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B546355C2A19A25300F0F140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55764FB2A85196C00C75CCA /* ReusableIdentifirer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifirer.swift; sourceTree = "<group>"; };
+		B55764FE2A8519BE00C75CCA /* GoalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalHeaderView.swift; sourceTree = "<group>"; };
+		B55765002A8538AE00C75CCA /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		B55765022A85391100C75CCA /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 		B5EFC7F72A1778E700B4AA8D /* Knocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EFC7FA2A1778E700B4AA8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5EFC7FC2A1778E700B4AA8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,7 +168,8 @@
 		B545F1062A57E0C70002DA8F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				B545F1072A57E0D20002DA8F /* HomeCell.swift */,
+				B55765002A8538AE00C75CCA /* GoalCell.swift */,
+				B55765022A85391100C75CCA /* TodoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -198,8 +211,26 @@
 			isa = PBXGroup;
 			children = (
 				B545F11B2A65090B0002DA8F /* UILabel+Extension.swift */,
+				B55764FB2A85196C00C75CCA /* ReusableIdentifirer.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B545F11D2A683CF40002DA8F /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				B545F11E2A683D060002DA8F /* PlanningViewController.swift */,
+				B545F1202A701BBD0002DA8F /* PlanViewModel.swift */,
+			);
+			path = Plan;
+			sourceTree = "<group>";
+		};
+		B545F12A2A762FCF0002DA8F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B545F12B2A762FE60002DA8F /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		B546354E2A19A25200F0F140 /* Frameworks */ = {
@@ -221,6 +252,14 @@
 				B546355C2A19A25300F0F140 /* Info.plist */,
 			);
 			path = DreamCatcher;
+			sourceTree = "<group>";
+		};
+		B55764FD2A8519A100C75CCA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B55764FE2A8519BE00C75CCA /* GoalHeaderView.swift */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		B5EFC7EE2A1778E700B4AA8D = {
@@ -280,6 +319,8 @@
 		B5EFC82D2A17794800B4AA8D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B545F12A2A762FCF0002DA8F /* Onboarding */,
+				B545F11D2A683CF40002DA8F /* Plan */,
 				B545F11A2A6508FB0002DA8F /* Extension */,
 				B545F1152A5E7B170002DA8F /* Components */,
 				B545F1102A5BF47E0002DA8F /* Model */,
@@ -303,6 +344,7 @@
 		B5EFC83B2A177AB600B4AA8D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B55764FD2A8519A100C75CCA /* Headers */,
 				B545F1062A57E0C70002DA8F /* Cells */,
 				B5EFC83C2A177AC300B4AA8D /* HomeViewController.swift */,
 				B5EFC83E2A17C2B800B4AA8D /* HomeViewModel.swift */,
@@ -506,16 +548,22 @@
 				B5EFC83D2A177AC300B4AA8D /* HomeViewController.swift in Sources */,
 				B5EFC8052A1778E700B4AA8D /* Knocking.xcdatamodeld in Sources */,
 				B545F1172A5E7B2F0002DA8F /* CalendarView.swift in Sources */,
-				B545F1082A57E0D20002DA8F /* HomeCell.swift in Sources */,
+				B545F11F2A683D060002DA8F /* PlanningViewController.swift in Sources */,
 				B5EFC7FB2A1778E700B4AA8D /* AppDelegate.swift in Sources */,
+				B545F12C2A762FE60002DA8F /* OnboardingViewController.swift in Sources */,
 				B5EFC83F2A17C2B800B4AA8D /* HomeViewModel.swift in Sources */,
+				B55765032A85391100C75CCA /* TodoCell.swift in Sources */,
 				B5EFC7FD2A1778E700B4AA8D /* SceneDelegate.swift in Sources */,
 				B545F1142A5BF4DA0002DA8F /* Goal.swift in Sources */,
 				B545F10C2A5BDB8A0002DA8F /* CoreDataManager.swift in Sources */,
 				B5EFC8442A17CA4800B4AA8D /* CalendarViewController.swift in Sources */,
 				B545F1122A5BF4880002DA8F /* User.swift in Sources */,
+				B55764FC2A85196C00C75CCA /* ReusableIdentifirer.swift in Sources */,
 				B545F11C2A65090B0002DA8F /* UILabel+Extension.swift in Sources */,
+				B55765012A8538AE00C75CCA /* GoalCell.swift in Sources */,
 				B5EFC8412A17C2F500B4AA8D /* BaseViewController.swift in Sources */,
+				B55764FF2A8519BE00C75CCA /* GoalHeaderView.swift in Sources */,
+				B545F1212A701BBD0002DA8F /* PlanViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

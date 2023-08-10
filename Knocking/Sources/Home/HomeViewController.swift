@@ -10,13 +10,27 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class HomeViewController: BaseViewController {
+enum HomeSection {
+    case knocking
+    case home
+    case calendar
+    case statistic
+}
 
+
+
+class HomeViewController: BaseViewController {
+    
+    typealias Item = Goal
+    
+    var dataSorce: UICollectionViewDiffableDataSource<HomeSection, Item>!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupNavBar()
-
+        
         
     }
     
@@ -44,11 +58,8 @@ class HomeViewController: BaseViewController {
     
     override func configView() {
         view.addSubview(collectionView)
-        //collectionView.backgroundColor = .red
     }
     override func configLauout() {
-        
-        collectionView.collectionViewLayout = generateLayout()
         
         collectionView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
@@ -56,24 +67,35 @@ class HomeViewController: BaseViewController {
             $0.trailing.equalTo(view)
             $0.bottom.equalTo(view.safeAreaLayoutGuide)
         }
+        generateLayout()
         
     }
+    
+    private func configureDataSource() {
+       
+    }
+    
+    
+    
     override func bindRX() {
         
     }
     
     
-    
     //MARK: UI
     
-    let collectionView: UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewLayout()
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.dataSource = self
+        view.delegate = self
+        view.register(GoalCell.self, forCellWithReuseIdentifier: GoalCell.reusableIdentifirer)
+        view.register(TodoCell.self, forCellWithReuseIdentifier: TodoCell.reusableIdentifirer)
         return view
     }()
 
     
-    let titleLabel: UILabel = {
+    lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Hello Minjae!"
         label.textColor = .black
@@ -82,9 +104,6 @@ class HomeViewController: BaseViewController {
         label.sizeToFit()
         return label
     }()
-    
-    
-
 
 }
 
@@ -122,13 +141,52 @@ extension HomeViewController {
     
     
     
-    func generateLayout() -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
+    func generateLayout() {
+        let layout = UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
             
             switch sectionNumber {
             case 0: return self.firstLayoutSection()
             default: return self.secondLayoutSection()
             }
         }
+        collectionView.setCollectionViewLayout(layout, animated: true)
+        
+        
     }
+}
+
+
+//MARK: DataSource
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 1
+        default:
+            return 6
+        }
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch indexPath.section {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GoalCell.reusableIdentifirer, for: indexPath) as? GoalCell else { return UICollectionViewCell() }
+            
+            return cell
+            
+        default:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodoCell.reusableIdentifirer, for: indexPath) as? TodoCell else { return UICollectionViewCell() }
+            return cell
+            
+        }
+    }
+}
+
+//MARK: Delegate
+extension HomeViewController: UICollectionViewDelegate {
+    
 }

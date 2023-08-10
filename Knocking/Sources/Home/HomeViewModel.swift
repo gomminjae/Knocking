@@ -7,9 +7,11 @@
 
 import Foundation
 import RxSwift
+import RxFlow
+import RxCocoa
 
 
-protocol HomeViewModelBindable {
+protocol ViewModelType {
     associatedtype Input
     associatedtype Output
     
@@ -18,6 +20,5 @@ protocol HomeViewModelBindable {
 
 class HomeViewModel {
     private let disposeBag = DisposeBag()
-    
     
 }
