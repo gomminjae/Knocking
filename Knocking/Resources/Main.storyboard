@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="1990.0763358778624" y="3.5211267605633805"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="Bli-2H-WJR">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QuP-oc-GBm" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QuP-oc-GBm" customClass="CustomTabBarController" customModule="Knocking" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SFd-AC-Uyk">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

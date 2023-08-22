@@ -28,7 +28,6 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
     }
     
@@ -73,25 +72,25 @@ class HomeViewController: BaseViewController {
     
     override func bindRX() {
         
-        let goalDataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String,Goal>>(configureCell: { dataSource, collectionView, indexPath, item in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GoalCell.reusableIdentifirer, for: indexPath) as? GoalCell else { return UICollectionViewCell() }
-
-            return cell
-        })
-
-        let todoDataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String,Todo>>(configureCell: { dataSource, collectionView, indexPath, item in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodoCell.reusableIdentifirer, for: indexPath) as? TodoCell else { return UICollectionViewCell() }
-
-            return cell
-        })
-        
-        Observable.just([SectionModel(model: "Goals", items: [Goal]())])
-            .bind(to: collectionView.rx.items(dataSource: goalDataSource))
-            .disposed(by: disposeBag)
-        
-        Observable.just([SectionModel(model: "Todos", items: [Todo]())])
-            .bind(to: collectionView.rx.items(dataSource: todoDataSource))
-            .disposed(by: disposeBag)
+//        let goalDataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String,Goal>>(configureCell: { dataSource, collectionView, indexPath, item in
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GoalCell.reusableIdentifirer, for: indexPath) as? GoalCell else { return UICollectionViewCell() }
+//
+//            return cell
+//        })
+//
+//        let todoDataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String,Todo>>(configureCell: { dataSource, collectionView, indexPath, item in
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodoCell.reusableIdentifirer, for: indexPath) as? TodoCell else { return UICollectionViewCell() }
+//
+//            return cell
+//        })
+//
+//        Observable.just([SectionModel(model: "Goals", items: [Goal]())])
+//            .bind(to: collectionView.rx.items(dataSource: goalDataSource))
+//            .disposed(by: disposeBag)
+//
+//        Observable.just([SectionModel(model: "Todos", items: [Todo]())])
+//            .bind(to: collectionView.rx.items(dataSource: todoDataSource))
+//            .disposed(by: disposeBag)
         
     }
     
@@ -103,6 +102,8 @@ class HomeViewController: BaseViewController {
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.register(GoalCell.self, forCellWithReuseIdentifier: GoalCell.reusableIdentifirer)
         view.register(TodoCell.self, forCellWithReuseIdentifier: TodoCell.reusableIdentifirer)
+        view.register(ScheduleCell.self, forCellWithReuseIdentifier: ScheduleCell.reusableIdentifirer)
+        view.dataSource = self
         return view
     }()
 
@@ -153,12 +154,25 @@ extension HomeViewController {
         return section
     }
     
+    private func thirdLayoutSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize) // Whithout badge
+        item.contentInsets = .init(top: 15, leading: 0, bottom: 15, trailing: 0)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:.fractionalWidth(0.5))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.contentInsets = .init(top: 0, leading: 15, bottom: 0, trailing: 15)
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .none
+        return section
+    }
+    
     func generateLayout() {
         let layout = UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
             
             switch sectionNumber {
             case 0: return self.firstLayoutSection()
-            default: return self.secondLayoutSection()
+            case 1: return self.secondLayoutSection()
+            default: return self.thirdLayoutSection()
             }
         }
         collectionView.setCollectionViewLayout(layout, animated: true)
@@ -166,31 +180,38 @@ extension HomeViewController {
     }
 }
 //MARK: DataSource
-//extension HomeViewController: UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        switch section {
-//        case 0:
-//            return 1
-//        default:
-//            return 6
-//        }
-//    }
-//
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 2
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        switch indexPath.section {
-//        case 0:
-//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GoalCell.reusableIdentifirer, for: indexPath) as? GoalCell else { return UICollectionViewCell() }
-//
-//            return cell
-//
-//        default:
-//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodoCell.reusableIdentifirer, for: indexPath) as? TodoCell else { return UICollectionViewCell() }
-//            return cell
-//
-//        }
-//    }
-//}
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return 4
+        default:
+            return 8
+        }
+    }
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 3
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch indexPath.section {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GoalCell.reusableIdentifirer, for: indexPath) as? GoalCell else { return UICollectionViewCell() }
+
+            return cell
+            
+        case 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodoCell.reusableIdentifirer, for: indexPath) as? TodoCell else { return UICollectionViewCell() }
+
+            return cell
+
+        default:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ScheduleCell.reusableIdentifirer, for: indexPath) as? ScheduleCell else { return UICollectionViewCell() }
+            return cell
+
+        }
+    }
+}
