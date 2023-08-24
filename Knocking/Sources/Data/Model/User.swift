@@ -8,10 +8,9 @@
 import Foundation
 
 
-struct User: Hashable {
+struct User: Hashable, Codable {
     
-    var goals: [Goal]
     var name: String
     var birthDay: Date
-    var wakeUptime: Date
+    //var wakeUptime: Date
 }

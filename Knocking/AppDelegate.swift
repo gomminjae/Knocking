@@ -11,10 +11,27 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
+    let userInfo = UserInfoManager.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let rootViewController: UIViewController
+        
+        if userInfo.isUserInfo() {
+            let homeVC = CustomTabBarController()
+            rootViewController = homeVC
+            
+        } else {
+            let onboardingVC = OnboardingViewController()
+            rootViewController = onboardingVC
+        }
+        
+        window?.rootViewController = rootViewController
+        
         return true
     }
 

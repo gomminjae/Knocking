@@ -35,6 +35,7 @@
 		B55765102A94E79A00C75CCA /* CustomTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557650F2A94E79A00C75CCA /* CustomTabbarViewController.swift */; };
 		B55765122A94E80600C75CCA /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55765112A94E80600C75CCA /* CustomTabbar.swift */; };
 		B55765152A94FC1600C75CCA /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55765142A94FC1600C75CCA /* ScheduleCell.swift */; };
+		B55765182A97A87100C75CCA /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55765172A97A87100C75CCA /* UserInfoManager.swift */; };
 		B5EFC7FB2A1778E700B4AA8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC7FA2A1778E700B4AA8D /* AppDelegate.swift */; };
 		B5EFC7FD2A1778E700B4AA8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC7FC2A1778E700B4AA8D /* SceneDelegate.swift */; };
 		B5EFC8052A1778E700B4AA8D /* Knocking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC8032A1778E700B4AA8D /* Knocking.xcdatamodeld */; };
@@ -119,6 +120,7 @@
 		B557650F2A94E79A00C75CCA /* CustomTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarViewController.swift; sourceTree = "<group>"; };
 		B55765112A94E80600C75CCA /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		B55765142A94FC1600C75CCA /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		B55765172A97A87100C75CCA /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 		B5EFC7F72A1778E700B4AA8D /* Knocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EFC7FA2A1778E700B4AA8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5EFC7FC2A1778E700B4AA8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -307,6 +309,15 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		B55765162A97A85E00C75CCA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B545F1102A5BF47E0002DA8F /* Model */,
+				B55765172A97A87100C75CCA /* UserInfoManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		B5EFC7EE2A1778E700B4AA8D = {
 			isa = PBXGroup;
 			children = (
@@ -364,11 +375,11 @@
 		B5EFC82D2A17794800B4AA8D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B55765162A97A85E00C75CCA /* Data */,
 				B55765132A94EC1600C75CCA /* VC */,
 				B545F12A2A762FCF0002DA8F /* Onboarding */,
 				B545F11A2A6508FB0002DA8F /* Extension */,
 				B545F1152A5E7B170002DA8F /* Components */,
-				B545F1102A5BF47E0002DA8F /* Model */,
 				B545F1092A5BDB6F0002DA8F /* Manager */,
 				B5EFC8402A17C2F500B4AA8D /* BaseViewController.swift */,
 			);
@@ -594,6 +605,7 @@
 				B5EFC83D2A177AC300B4AA8D /* HomeViewController.swift in Sources */,
 				B5EFC8052A1778E700B4AA8D /* Knocking.xcdatamodeld in Sources */,
 				B545F1172A5E7B2F0002DA8F /* CalendarView.swift in Sources */,
+				B55765182A97A87100C75CCA /* UserInfoManager.swift in Sources */,
 				B545F11F2A683D060002DA8F /* PlanningViewController.swift in Sources */,
 				B5EFC7FB2A1778E700B4AA8D /* AppDelegate.swift in Sources */,
 				B545F12C2A762FE60002DA8F /* OnboardingViewController.swift in Sources */,

@@ -9,9 +9,6 @@ import UIKit
 import SnapKit
 
 class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

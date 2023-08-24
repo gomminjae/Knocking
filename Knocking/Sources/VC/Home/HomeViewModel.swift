@@ -15,10 +15,29 @@ protocol ViewModelType {
     associatedtype Input
     associatedtype Output
     
-    var disposeBag: DisposeBag { get set }
+    var input: Input { get }
+    var output: Output { get }
 }
 
-class HomeViewModel {
+class HomeViewModel: ViewModelType {
     private let disposeBag = DisposeBag()
+    
+    struct Input {
+        
+    }
+    
+    struct Output {
+    
+    }
+    
+    var input: Input
+    var output: Output
+    
+    init(input: Input, output: Output) {
+        self.input = input
+        self.output = output
+    }
+    
+    
     
 }
