@@ -15,6 +15,7 @@ class OnboardingViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
 
         // Do any additional setup after loading the view.
     }
@@ -24,23 +25,49 @@ class OnboardingViewController: BaseViewController {
     }
     
     override func configView() {
+        view.addSubview(titleLabel)
+        view.addSubview(knockingButton)
         
     }
     
     override func configLauout() {
-        
+        titleLabel.snp.makeConstraints {
+            $0.centerX.equalTo(view)
+            $0.centerY.equalTo(view)
+        }
+        knockingButton.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(20)
+            $0.centerX.equalTo(titleLabel)
+            $0.width.equalTo(180)
+            $0.height.equalTo(70)
+        }
     }
     
-    //MARK: UI
-    let baseView: UIView = {
-        let view = UIView()
-        return view
-    }()
     
-    let titleLabel: UILabel = {
+    //MARK: UI
+    lazy var titleLabel: UILabel = {
         let label = UILabel()
+        label.text = "당신의 꿈에 노크하세요"
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         return label
     }()
+    
+    lazy var knockingButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("노크하기", for: .normal)
+        button.backgroundColor = .systemPink
+        button.addTarget(self, action: #selector(tapped), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func tapped() {
+        let vc = UserSettingViewController()
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .flipHorizontal
+        self.present(vc, animated: true)
+    }
+    
 
     
 

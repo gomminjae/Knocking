@@ -22,12 +22,12 @@ class UserInfoManager {
     
     
     func isUserInfo() -> Bool {
-        if let userInfo = UserDefaults.standard.data(forKey: key), let _ = try? JSONDecoder.decode(User.self, from: userInfo) {
-            return true
-        } else {
-            return false
+            if let userInfo = UserDefaults.standard.data(forKey: key), let _ = try? JSONDecoder().decode(User.self, from: userInfo) {
+                return true
+            } else {
+                return false
+            }
         }
-    }
     
     
 }

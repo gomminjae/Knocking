@@ -36,6 +36,7 @@
 		B55765122A94E80600C75CCA /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55765112A94E80600C75CCA /* CustomTabbar.swift */; };
 		B55765152A94FC1600C75CCA /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55765142A94FC1600C75CCA /* ScheduleCell.swift */; };
 		B55765182A97A87100C75CCA /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55765172A97A87100C75CCA /* UserInfoManager.swift */; };
+		B557651A2A9E274000C75CCA /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55765192A9E274000C75CCA /* UserSettingViewController.swift */; };
 		B5EFC7FB2A1778E700B4AA8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC7FA2A1778E700B4AA8D /* AppDelegate.swift */; };
 		B5EFC7FD2A1778E700B4AA8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC7FC2A1778E700B4AA8D /* SceneDelegate.swift */; };
 		B5EFC8052A1778E700B4AA8D /* Knocking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC8032A1778E700B4AA8D /* Knocking.xcdatamodeld */; };
@@ -121,6 +122,7 @@
 		B55765112A94E80600C75CCA /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		B55765142A94FC1600C75CCA /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		B55765172A97A87100C75CCA /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		B55765192A9E274000C75CCA /* UserSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
 		B5EFC7F72A1778E700B4AA8D /* Knocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EFC7FA2A1778E700B4AA8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5EFC7FC2A1778E700B4AA8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				B545F12B2A762FE60002DA8F /* OnboardingViewController.swift */,
+				B55765192A9E274000C75CCA /* UserSettingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				B5EFC83F2A17C2B800B4AA8D /* HomeViewModel.swift in Sources */,
 				B55765032A85391100C75CCA /* TodoCell.swift in Sources */,
 				B5EFC7FD2A1778E700B4AA8D /* SceneDelegate.swift in Sources */,
+				B557651A2A9E274000C75CCA /* UserSettingViewController.swift in Sources */,
 				B545F1142A5BF4DA0002DA8F /* Goal.swift in Sources */,
 				B55765152A94FC1600C75CCA /* ScheduleCell.swift in Sources */,
 				B545F10C2A5BDB8A0002DA8F /* CoreDataManager.swift in Sources */,
